@@ -15,7 +15,7 @@ import java.security.SecureRandom;
 @Service
 @Slf4j
 public class KafkaProducer {
-    private KafkaTemplate<String, String> kafkaTemplate;
+    private final KafkaTemplate<String, String> kafkaTemplate;
 
     @Autowired
     public KafkaProducer(KafkaTemplate<String, String> kafkaTemplate) {

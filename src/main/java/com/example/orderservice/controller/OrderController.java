@@ -24,10 +24,10 @@ public class OrderController {
     OrderService orderService;
     KafkaProducer kafkaProducer;
 
-    @Autowired
-    public OrderController(Environment env, OrderService orderService) {
+    public OrderController(Environment env, OrderService orderService, KafkaProducer kafkaProducer) {
         this.env = env;
         this.orderService = orderService;
+        this.kafkaProducer = kafkaProducer;
     }
 
     @GetMapping("/health_check")

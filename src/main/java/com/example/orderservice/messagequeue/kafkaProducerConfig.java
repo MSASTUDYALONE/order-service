@@ -19,7 +19,7 @@ public class kafkaProducerConfig {
     @Bean
     public ProducerFactory<String, String> producerFactory() { // 접속 정보 설정
         Map<String, Object> properties = new HashMap<>();
-        properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1");
+        properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
         properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class); // KEY 풀어주기
         properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class); // VALUE 풀어주기
 
